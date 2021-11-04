@@ -1,7 +1,7 @@
 import { v4 as uuidV4 } from "uuid";
 
 class Category {
-  id: string;
+  id?: string;
   name: string;
   category: string;
   created_at: Date;
