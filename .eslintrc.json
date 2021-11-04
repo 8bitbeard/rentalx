@@ -21,6 +21,12 @@
         "prettier"
     ],
     "rules": {
+        "max-len": [
+            "error",
+            {
+                "code": 120
+            }
+        ],
         "prettier/prettier": "error",
         "camelcase": "off",
         "import/no-unresolved": "error",
@@ -28,10 +34,12 @@
             "error",
             {
                 "selector": "interface",
-                "format": ["PascalCase"],
+                "format": [
+                    "PascalCase"
+                ],
                 "custom": {
-                "regex": "^I[A-Z]",
-                "match": true
+                    "regex": "^I[A-Z]",
+                    "match": true
                 }
             }
         ],
@@ -50,16 +58,31 @@
             }
         ],
         "import-helpers/order-imports": [
-        "warn",
+            "warn",
             {
                 "newlinesBetween": "always",
-                "groups": ["module", "/^@shared/", ["parent", "sibling", "index"]],
-                "alphabetize": { "order": "asc", "ignoreCase": true }
+                "groups": [
+                    "module",
+                    "/^@shared/",
+                    [
+                        "parent",
+                        "sibling",
+                        "index"
+                    ]
+                ],
+                "alphabetize": {
+                    "order": "asc",
+                    "ignoreCase": true
+                }
             }
         ],
         "import/no-extraneous-dependencies": [
             "error",
-            { "devDependencies": ["**/*.spec.js"] }
+            {
+                "devDependencies": [
+                    "**/*.spec.js"
+                ]
+            }
         ]
     },
     "settings": {
