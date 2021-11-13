@@ -1,0 +1,6 @@
+
+class Car {
+
+}
+
+export { Car }
