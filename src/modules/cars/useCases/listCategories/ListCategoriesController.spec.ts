@@ -53,6 +53,4 @@ describe("List Categories", () => {
     expect(response.body[0].name).toEqual("Category Test");
     expect(response.body[0].description).toEqual("Description Test");
   });
-
-  it("should not be able to create a new category with an already used name", async () => {});
 });
