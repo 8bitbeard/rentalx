@@ -13,6 +13,16 @@ services:
       - POSTGRES_DB=rentalx_development
     volumes:
       - pgdata:/data/postgres
+  database_test:
+    image: postgres
+    container_name: database_test_ignite
+    restart: always
+    ports:
+      - 5106:5432
+    environment:
+      - POSTGRES_USER=rentalx
+      - POSTGRES_PASSWORD=ignite
+      - POSTGRES_DB=rentalx_testing
   app:
     build: .
     container_name: rentalx
