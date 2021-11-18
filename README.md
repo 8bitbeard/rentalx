@@ -42,8 +42,8 @@ Deve ser possível cadastrar a imagem do carro.
 Utilizar o multer para upload dos arquivos.
 
 **RN**
-O usuário deve poder cadastrar mais de uma imagem para o mesmo carro.
-O usuário responsável pelo cadastro deve ser um usuário administrador.
+- O usuário deve poder cadastrar mais de uma imagem para o mesmo carro.
+- O usuário responsável pelo cadastro deve ser um usuário administrador.
 
 
 # Aluguel de carro
@@ -72,3 +72,4 @@ Deve ser possível cadastrar um aluguel.
 - Ao realizar a devolução, deverá ser calculado o total do aluguel.
 - Caso o horário da devolução seja superior ao horário previsto da entrega, deverá ser cobrada uma multa proporcional aos dias de atraso.
 - caso haja multa, devertá ser somado o valor ao valor total do aluguél
+- O usuário deve estar logado na aplicação.
