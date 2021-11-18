@@ -54,6 +54,21 @@ Deve ser possível cadastrar um aluguel.
 **RNF**
 
 **RN**
-O aluguel deve ter duração mínima de 24 horas
-Não deve ser possível cadastrar um novo aluguél caso já exista um aberto para o mesmo usuário.
-Não deve ser possível cadastrar um novo aluguél caso já exista um aberto para o mesmo carro.
+- O aluguel deve ter duração mínima de 24 horas
+- Não deve ser possível cadastrar um novo aluguél caso já exista um aberto para o mesmo usuário.
+- Não deve ser possível cadastrar um novo aluguél caso já exista um aberto para o mesmo carro.
+- Ao realizar um aluguel, o status do carro deverá ser alterado para indisponível
+
+
+# Devolução do carro
+
+**RF**
+- Deve ser possível realizar a devolução de um carro
+
+
+**RN**
+- Se o carro for devolvido com menos de 24 horas, deverá ser cobrada a dirária completa.
+- Ao realizar a devolução, o usuári odeverá ser liberado para realizar um novo aluguel.
+- Ao realizar a devolução, deverá ser calculado o total do aluguel.
+- Caso o horário da devolução seja superior ao horário previsto da entrega, deverá ser cobrada uma multa proporcional aos dias de atraso.
+- caso haja multa, devertá ser somado o valor ao valor total do aluguél
