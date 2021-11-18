@@ -27,9 +27,19 @@ describe("Create Rental", () => {
   });
 
   it("should be able to create a new rental", async () => {
+    const car = await carsRepositoryInMemory.create({
+      name: "TestCar",
+      description: "TestDescription",
+      daily_rate: 100,
+      license_plate: "TEST-1234",
+      fine_amount: 40,
+      category_id: "123123",
+      brand: "TestBrand",
+    });
+
     const rental = await createRentalUseCase.execute({
       user_id: "12345",
-      car_id: "121212",
+      car_id: car.id,
       expected_return_date: dayAfter,
     });
 
@@ -38,9 +48,19 @@ describe("Create Rental", () => {
   });
 
   it("should not be able to create a new rental when the user already have a rent", async () => {
+    const car = await carsRepositoryInMemory.create({
+      name: "TestCar",
+      description: "TestDescription",
+      daily_rate: 100,
+      license_plate: "TEST-1234",
+      fine_amount: 40,
+      category_id: "123123",
+      brand: "TestBrand",
+    });
+
     const rental = {
       user_id: "12345",
-      car_id: "121212",
+      car_id: car.id,
       expected_return_date: dayAfter,
     };
 
@@ -51,16 +71,26 @@ describe("Create Rental", () => {
   });
 
   it("should not be able to create a new rental when the car is already rented by someone", async () => {
+    const car = await carsRepositoryInMemory.create({
+      name: "TestCar",
+      description: "TestDescription",
+      daily_rate: 100,
+      license_plate: "TEST-1234",
+      fine_amount: 40,
+      category_id: "123123",
+      brand: "TestBrand",
+    });
+
     await createRentalUseCase.execute({
       user_id: "1234",
-      car_id: "121212",
+      car_id: car.id,
       expected_return_date: dayAfter,
     });
 
     expect(async () => {
       await createRentalUseCase.execute({
         user_id: "4321",
-        car_id: "121212",
+        car_id: car.id,
         expected_return_date: dayAfter,
       });
     }).rejects.toBeInstanceOf(AppError);
