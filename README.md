@@ -1,45 +1,45 @@
 # Cadastro de carro
 
 **RF**
-Deve ser possível cadastrar um novo carro.
-Deve ser possível listar todas as categorias.
+- Deve ser possível cadastrar um novo carro.
+- Deve ser possível listar todas as categorias.
 
 **RN**
-Não deve ser possível cadastrar um carro com uma placa já existente.
-O carro deve ser cadastrado por padrâo, como disponível para locação.
-O usuário responsável pelo cadastro deve ser um usuário administrador.
+- Não deve ser possível cadastrar um carro com uma placa já existente.
+- O carro deve ser cadastrado por padrâo, como disponível para locação.
+- O usuário responsável pelo cadastro deve ser um usuário administrador.
 
 
 # Listagem de carros
 
 **RF**
-Deve ser possível listar todos carros os carros disponíveis.
-Deve ser possível listar todos os carros disponíveis pelo nome da categoria.
-Deve ser possível listar todos os carros disponíveis pelo nome da marca.
-Deve ser possível listar todos os carros disponíveis pelo nome do carro.
+- Deve ser possível listar todos carros os carros disponíveis.
+- Deve ser possível listar todos os carros disponíveis pelo nome da categoria.
+- Deve ser possível listar todos os carros disponíveis pelo nome da marca.
+- Deve ser possível listar todos os carros disponíveis pelo nome do carro.
 
 **RN**
-O usuário não precisa estar logado no sistema.
+- O usuário não precisa estar logado no sistema.
 
 
 # Cadastro de Especificação no carro
 
 **RF**
-Deve ser possível cadastrar uma especificação para um carro.
+- Deve ser possível cadastrar uma especificação para um carro.
 
 **RN**
-Não deve ser possível cadastrar uma especificação para um carro não cadastrado.
-Não deve ser possível cadastrar uma especificação já existente para o mesmo carro.
-O usuário responsável pelo cadastro deve ser um usuário administrador.
+- Não deve ser possível cadastrar uma especificação para um carro não cadastrado.
+- Não deve ser possível cadastrar uma especificação já existente para o mesmo carro.
+- O usuário responsável pelo cadastro deve ser um usuário administrador.
 
 
 # Cadastro de imagens do carrro
 
 **RF**
-Deve ser possível cadastrar a imagem do carro.
+- Deve ser possível cadastrar a imagem do carro.
 
 **RNF**
-Utilizar o multer para upload dos arquivos.
+- Utilizar o multer para upload dos arquivos.
 
 **RN**
 - O usuário deve poder cadastrar mais de uma imagem para o mesmo carro.
@@ -49,7 +49,7 @@ Utilizar o multer para upload dos arquivos.
 # Aluguel de carro
 
 **RF**
-Deve ser possível cadastrar um aluguel.
+- Deve ser possível cadastrar um aluguel.
 
 **RNF**
 
@@ -73,3 +73,13 @@ Deve ser possível cadastrar um aluguel.
 - Caso o horário da devolução seja superior ao horário previsto da entrega, deverá ser cobrada uma multa proporcional aos dias de atraso.
 - caso haja multa, devertá ser somado o valor ao valor total do aluguél
 - O usuário deve estar logado na aplicação.
+
+
+# Listagem de Alugueis para usuário
+
+**RF**
+- Deve ser possível realizar a busca de todos os alugueis para o usuário
+
+
+**RN**
+- O usuário deve estar logado na aplicação
