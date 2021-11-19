@@ -37,10 +37,11 @@ describe("Create Car", () => {
       brand: "Brand",
       category_id: "Category",
     };
-    expect(async () => {
-      await createCarUseCase.execute(carData);
-      await createCarUseCase.execute(carData);
-    }).rejects.toBeInstanceOf(AppError);
+    await createCarUseCase.execute(carData);
+
+    await expect(createCarUseCase.execute(carData)).rejects.toEqual(
+      new AppError("Car already exists")
+    );
   });
 
   it("should be able to create a car with available property as true by default", async () => {
