@@ -96,17 +96,3 @@
 - O usuário precisa informar uma nova senha
 - o link enviado para a recuperação de senha deve expirar em 3 horas
 
-
-FORGOT_MAIL_URL=http://localhost:3333/password/reset?token=
-APP_API_URL=http://localhost:3333
-
-AWS_KEY=<key>
-AWS_SECRET=<key>
-AWS_BUCKET=node-rentx-api
-AWS_BUCKET_REGION=sa-east-1
-AWS_BUCKET_URL=https://node-rentx-api.s3-sa-east-1.amazonaws.com
-AWS_REGION=us-east-1
-
-DISK=local
-
-MAIL_PROVIDER=ethereal
