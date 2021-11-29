@@ -1,10 +1,10 @@
 # Cadastro de carro
 
-**RF**
+**Requisitos Funcionais**
 - Deve ser possível cadastrar um novo carro.
 - Deve ser possível listar todas as categorias.
 
-**RN**
+**Regras de Negócios**
 - Não deve ser possível cadastrar um carro com uma placa já existente.
 - O carro deve ser cadastrado por padrâo, como disponível para locação.
 - O usuário responsável pelo cadastro deve ser um usuário administrador.
@@ -12,22 +12,22 @@
 
 # Listagem de carros
 
-**RF**
+**Requisitos Funcionais**
 - Deve ser possível listar todos carros os carros disponíveis.
 - Deve ser possível listar todos os carros disponíveis pelo nome da categoria.
 - Deve ser possível listar todos os carros disponíveis pelo nome da marca.
 - Deve ser possível listar todos os carros disponíveis pelo nome do carro.
 
-**RN**
+**Regras de Negócios**
 - O usuário não precisa estar logado no sistema.
 
 
 # Cadastro de Especificação no carro
 
-**RF**
+**Requisitos Funcionais**
 - Deve ser possível cadastrar uma especificação para um carro.
 
-**RN**
+**Regras de Negócios**
 - Não deve ser possível cadastrar uma especificação para um carro não cadastrado.
 - Não deve ser possível cadastrar uma especificação já existente para o mesmo carro.
 - O usuário responsável pelo cadastro deve ser um usuário administrador.
@@ -35,25 +35,23 @@
 
 # Cadastro de imagens do carrro
 
-**RF**
+**Requisitos Funcionais**
 - Deve ser possível cadastrar a imagem do carro.
 
 **RNF**
 - Utilizar o multer para upload dos arquivos.
 
-**RN**
+**Regras de Negócios**
 - O usuário deve poder cadastrar mais de uma imagem para o mesmo carro.
 - O usuário responsável pelo cadastro deve ser um usuário administrador.
 
 
 # Aluguel de carro
 
-**RF**
+**Requisitos Funcionais**
 - Deve ser possível cadastrar um aluguel.
 
-**RNF**
-
-**RN**
+**Regras de Negócios**
 - O aluguel deve ter duração mínima de 24 horas
 - Não deve ser possível cadastrar um novo aluguél caso já exista um aberto para o mesmo usuário.
 - Não deve ser possível cadastrar um novo aluguél caso já exista um aberto para o mesmo carro.
@@ -62,11 +60,11 @@
 
 # Devolução do carro
 
-**RF**
+**Requisitos Funcionais**
 - Deve ser possível realizar a devolução de um carro
 
 
-**RN**
+**Regras de Negócios**
 - Se o carro for devolvido com menos de 24 horas, deverá ser cobrada a dirária completa.
 - Ao realizar a devolução, o usuári odeverá ser liberado para realizar um novo aluguel.
 - Ao realizar a devolução, deverá ser calculado o total do aluguel.
@@ -77,22 +75,22 @@
 
 # Listagem de Alugueis para usuário
 
-**RF**
+**Requisitos Funcionais**
 - Deve ser possível realizar a busca de todos os alugueis para o usuário
 
 
-**RN**
+**Regras de Negócios**
 - O usuário deve estar logado na aplicação
 
 
 # Recuperar Senha
 
-**RF**
+**Requisitos Funcionais**
 - Deve ser possível o usuário recuperar a senha informando o e-mail
 - O usuário deve receber um email com o passo a passo para a recuperação de senha
 - O usuário deve conseguir inserir uma nova senha
 
-**RN**
+**Regras de Negócios**
 - O usuário precisa informar uma nova senha
 - o link enviado para a recuperação de senha deve expirar em 3 horas
 
