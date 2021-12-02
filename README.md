@@ -93,4 +93,3 @@
 **Regras de Negócios**
 - O usuário precisa informar uma nova senha
 - o link enviado para a recuperação de senha deve expirar em 3 horas
-
